@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Yellowtail&display=swap');
+
+*, *::before, *::after, .row {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.cursor {
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    border: none;
+    box-shadow: 0 0 55px rgb(170, 1, 1);
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+}
+
+.cursorInner {
+    position: fixed;
+    z-index: 1;
+    width: 8px;
+    height: 8px;
+    background-color: rgb(255, 255, 255); 
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transform-origin:10%;
+}
+
+body {
+    cursor: none;
+    height: 100vh;
+    background-image: url(./Background.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.transparent {
+    background-color: rgba(39, 0, 0, 0.384);
+    height: inherit;
+}
+
+.header-right, .header-left {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    color: #fff;
+}
+
+.header-left {
+    justify-content: start;
+    padding: 2em 0 0 6em;
+}
+
+.logo {
+    display: flex;
+    align-items:baseline;
+}
+
+.a {
+    font-family: 'Kalam', cursive;
+    transform: rotate(-5deg);
+    font-size: 2em;
+    position: relative;
+    left: 20px;
+    font-weight: 900;
+    color:#f71d0c;
+    text-shadow: 10px 4px 30px #ffffff;
+}
+
+.s {
+    font-family: 'Yellowtail', cursive;
+    position: relative;
+    transform: rotate(-30deg);
+    font-size: 5em;
+    color: #c92735;
+    text-shadow: 10px 4px 25px #ebadadbe;
+}
+
+.a:before {
+    position: absolute;
+    content: '[';
+    left: 10px;
+    opacity: 0;
+    transition: all 0.7s ease;
+}
+
+.s:after {
+    position: absolute;
+    content: ']';
+    right: 10px;
+    opacity: 0;
+    transition: all 0.7s ease;
+}
+
+.logo:hover > .a:before {
+    opacity: 1;
+    left: -1em;
+    color: #ffffff65;
+}
+
+.logo:hover > .s:after {
+    opacity: 1;
+    right: -0.5em;
+    color: #ffffff65;
+}
+
+.header-right {
+    padding: 2em 0 0 0;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.music {
+    background-color: transparent;
+    position: relative;
+    bottom: 1.4em;
+    border: none;
+    color: #fff;
+    font-size: 2em;
+    margin-right: 3em;
+}
+
+.music:before {
+    transform: rotate(-90deg);
+    content: '';
+    position: absolute;
+    cursor: none;
+    width: 1.3em;
+    height: .1em;
+    bottom: 0;
+    top: -1em;
+    left: 1.1em;
+    background-image: radial-gradient(circle, #f71d0c, #f80f25, #f70437, #f40346, #f00d54);
+}
+
+i {
+    font-size: .8em;
+    font-weight: normal;
+    cursor: none;
+}
+
+.sound {
+    background-color: transparent;
+    position: relative;
+    border: none;
+    color: #fff;
+    font-size: .6em;
+    font-weight: normal;
+    cursor: none;
+}
+
+.sound:before, .sound:after {
+    position: absolute;
+    opacity: 0;
+    transition: all 0.7s ease;
+    font-size: 2.5em;
+    bottom: -.2em;
+    color: #f71d0c;
+}
+
+.sound:before {
+    content: "-";
+    left: 50%;
+}
+
+.sound:after {
+    content: "-";
+    right: 50%;
+}
+
+.sound:hover:before {
+    left: -20px;
+    opacity: 1;
+}
+
+.sound:hover:after {
+    right: -20px;
+    opacity: 1;
+}
+
+.spark {
+    position: relative;
+    top: 4em;
+    writing-mode: vertical-lr;
+}
+
+.spark:before {
+    transform: rotate(-90deg);
+    content: '';
+    position: absolute;
+    width: 6em;
+    height: .1em;
+    bottom: 0;
+    top: -3.5em;
+    left: -2.3em;
+    background-image: radial-gradient(circle, #f71d0c, #f80f25, #f70437, #f40346, #f00d54);
+}
+
+main {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to right, #ff1100, #ff0019, #ff0037, #9e0631, #700024);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Kalam;
+    height: 45vh;
+}
+
+.title_one {
+    display: block;
+    position: relative;
+    width: 50%;
+    font-size: 6em;
+    font-weight: 800;
+    margin: 0;
+    transform: translateX(-10%);
+}
+
+.title_one > span:before {
+    content: '';
+    position: absolute;
+    width: 1em;
+    height: .1em;
+    top: 1.5em;
+    transform: translateX(-110%);
+    background-color: rgb(243, 205, 205);
+}
+
+.title_one span {
+    padding-left: .5em;
+    font-size: .5em;
+    font-weight: none;
+}
+
+.title_two {
+    display: block;
+    width: 50%;
+    font-size: 5em;
+    font-weight: 800;
+    transform: translateX(10%);
+}
+
+.title_two span {
+    font-size: .6em;
+    font-weight: none;
+    padding-left: 2em;
+}
+
+.row:nth-child(3) {
+    position: relative;
+    align-items: center;
+    transition: 0.5s;
+    font-size: 2em;
+    font-family: Kalam;
+    padding-top: 1.3em;
+}
+
+.row:nth-child(3) .about {
+    width: 6em;
+    height: 2em;
+    mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+    mask-size: 2300% 100%;
+    border-radius: 15px;
+    border: none;
+    animation: ani 0.7s steps(22) forwards;
+    font-family: Yellowtail;
+    background-image: linear-gradient(to right, #f71d0c, #f80f25, #f70437, #f40346, #f00d54);
+    cursor: none;
+}
+
+.row:nth-child(3) .about:hover {
+    animation: ani2 0.7s steps(22) forwards;
+    color: #fff;
+}
+
+.mas {
+    position: absolute;
+    width: 6em;
+    color: #fff;
+}
+
+.mas::after {
+    content: '';
+    border: 1px solid red;
+    background-color: #f08dac48;
+    border-radius: 15px;
+    position: absolute;
+    bottom: -0.1em;
+    top: 0;
+    left: 0.5em;
+    width: 5em;
+}
+
+@keyframes ani {
+    from {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+   }
+    to {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+   }
+}
+
+@keyframes ani2 {
+    from {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+   }
+    to {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+   }
+}
+
+footer {
+    text-align: end;
+    color:#fff;
+    padding: 2em 0 0 0;
+}
+
+footer .fas {
+    padding: 0 4em 0 0;
+}
+
+@media (max-width: 575.98px) {
+
+    body {
+        padding: 0;
+    }
+    
+    .fixedPosition {
+        height: 50vh;
+    }
+
+    header {
+        height: 50vh;
+    }
+
+    .navigation_section  {
+        flex-flow: row;
+        height: 18vh;
+    }
+
+    .logo {
+        font-size: 0.8em;
+    }
+
+    .a {
+        left: 16px;
+        top: 2px;
+    }
+
+    .nav {
+        justify-content: flex-end;
+        align-items: baseline;
+    }
+
+    .nav-item {
+        width: 25%;
+        height: 5%;
+    }
+
+    .headerMain_section{
+        height: 10vh;
+        font-size: 0.8em;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .title_one {
+        text-align: center;
+    }
+
+    .title_two {
+        text-align: center;
+        transform: translate(0%, 0%);
+    }
+
+    .title-description_one:before {
+        width: 25px;
+    }
+
+    .title-description_one {
+        font-size: 2em;
+        transform: translate(130%, 0%);
+    }
+
+    .title-description_two {
+        font-size: 2em;
+        transform: translate(200%, -100%);
+    }
+
+    .headerFooter_section {
+        height: 20vh;
+        width: 100vw;
+        position: static;
+        padding: 0;
+    }
+
+    .spark:before {
+        color: #ffffff;
+        font-size: 0.9em;
+        display: block;
+        transform: translate(60%, 9.8em);
+        width: 150px;
+        height: 0;
+        writing-mode:horizontal-tb;
+    }
+    
+    .spark {
+        transform: translate(200%, -18em);
+        display: inline-block;
+        width: 70px;
+        height: 2px;
+    }
+    
+    #music {
+        display: inline-block;
+        position: relative;
+        transform: translateX(-190%) translateY(-6em);
+        font-size: 2em;
+        cursor: none;
+        color:rgb(155, 155, 155);
+    }
+
+    #music:after{
+        content: '';
+        opacity: 0;
+    }
+    #music:hover::before {
+        transition: none;
+        left: -2.45em;
+    }
+
+    #music:before {
+        content: '';
+        display: inline-block;
+        position:absolute;
+        width: 70px;
+        height: 2px;
+        background-color: rgb(155, 155, 155); 
+        opacity: 1;
+        transition: none;
+        left: -78px;
+        bottom: 20px;
+    }
+
+    .sound {
+        word-wrap: break-word;
+        font-size: 0.3em;
+        color: white;
+        display: none;
+    }
+
+    .fa-copyright{
+        font-size: .9em;
+        margin: 1em;
+    }
+} 

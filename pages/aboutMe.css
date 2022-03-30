@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Yellowtail&display=swap');
+
+*, *::before, *::after, .row {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  cursor: none;
+}
+
+.cursor {
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  border: none;
+  box-shadow: 0 0 55px rgb(255, 1, 1);
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.cursorInner {
+  position: fixed;
+  z-index: 1;
+  width: 8px;
+  height: 8px;
+  background-color: rgb(255, 255, 255); 
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transform-origin:10%;
+}
+
+body{
+  height: 100vh;
+}
+
+.sidenav {
+  height: 100%;
+  width: 14em;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #000000a8;
+  overflow-x: hidden;
+}
+
+.links{
+  font-family: 'kalam';
+  font-size: 1.3em;
+  padding: 1em;
+}
+.links a {
+  text-align: center;
+  padding: 1em;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  border-bottom: 2px solid #fff;
+  transition: 500ms ease;
+  background: linear-gradient(to right, #ff0019, #ff0037, #9e0631, #700024);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.links a:hover{
+  border-color: #9e0631;
+  border-radius: 5px;
+}
+
+.logo {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #000;
+  height: 15vh;
+  margin: 0 0 1em 0;
+}
+
+.name{
+  color: #fff;
+  background-color: #000;
+  text-align: center;
+  width: 100%;
+  display: block;
+  font-size: 1.4em;
+  font-family: 'Kalam';
+  padding: 2em 0 1em 0;
+  margin: -0.7em 1em 8em 0;
+  position: relative;
+}
+.name:after{
+  content: '';
+  position: absolute;
+  top: 4em;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 15vh;
+  background: linear-gradient(to bottom, #000, transparent);
+}
+
+.a{
+  height: 20%;
+  right: 0.2em;
+  font-family: 'Kalam', cursive;
+  transform: rotate(-5deg);
+  font-size: 2em;
+  position: relative;
+  font-weight: 900;
+  top: 0.6em;
+  color:#f71d0c;
+  text-shadow: 10px 4px 30px #ffffff;
+}
+
+.s {
+  height: 20%;
+  bottom: 0.2em;
+  left: -0.5em;
+  font-family: 'Yellowtail', cursive;
+  position: relative;
+  transform: rotate(-30deg);
+  font-size: 5em;
+  color: #c92735;
+  text-shadow: 10px 4px 25px #ebadadbe;
+}
+
+.a:before {
+  position: absolute;
+  content: '[';
+  left: 10px;
+  opacity: 0;
+  transition: all 0.7s ease;
+}
+
+.s:after {
+  position: absolute;
+  content: ']';
+  right: 10px;
+  opacity: 0;
+  transition: all 0.7s ease;
+}
+
+.logo:hover > .a:before {
+  opacity: 1;
+  left: -1em;
+  color: #ffffff65;
+}
+
+.logo:hover > .s:after {
+  opacity: 1;
+  right: -0.5em;
+  color: #ffffff65;
+}
+
+header{
+  position: relative;
+  overflow: hidden;
+  padding-left: 10em;
+  height: 90vh;
+  width: 100%;
+  background-color: #141414;
+}
+
+.aboutTitle {
+  font-size: 3em;
+  letter-spacing:2px;
+  height: 90vh;
+  margin-right: 2em;
+  font-weight:bold;
+  font-family: 'Kalam';
+  color: #f61a16;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: transparent;
+  justify-content: center;
+  align-items: flex-end;
+  background: linear-gradient(to right, #ff0019, #ff0019, #ff0015, #d30527, #8f002d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: 1s ease 0s slideInFromLeft normal running;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+i{
+  font-weight: normal;
+  background: linear-gradient(to bottom, #b60012, #e6b5c467);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.scrollDown{
+  height: 5vh;
+}
+main{
+  padding: 4em 0 0 10em; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  background-color: #141414;
+  position: relative;
+  color: #fff;
+}
