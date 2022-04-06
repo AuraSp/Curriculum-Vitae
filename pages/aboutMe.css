@@ -1053,7 +1053,7 @@ main {
   }
 
   .about h1 {
-    font-size: 3em;
+    font-size: 2em;
     letter-spacing: 2px;
   }
 
@@ -1102,6 +1102,10 @@ main {
 
   .about {
     height: auto;
+  }
+
+  .about h1{
+    font-size: 2em;
   }
 
   .myself,
