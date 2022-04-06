@@ -474,6 +474,61 @@ footer .fas {
     }
 }
 
+@media screen and (max-width: 534px) {
+    html {
+        height: 100%;
+        padding: 0;
+    }
+
+    header {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        height: 25vh;
+    }
+
+    main {
+        height: 30vh;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    .logo,
+    .mas,
+    .about {
+        font-size: 0.8em;
+    }
+
+    .title_one,
+    .title_two {
+        text-align: center;
+        font-size: 2.2em;
+    }
+
+    .spark {
+        position: relative;
+        -ms-flex-item-align: start;
+        align-self: flex-start;
+        top: 6em;
+        font-size: 0.8em;
+    }
+
+    .music {
+        display: none;
+    }
+
+    footer .fas {
+        padding: 0;
+        margin-top: 3em;
+    }
+}
+
 @media screen and (min-width: 534px) and (max-width: 575.98px) {
     html {
         height: 100%;
