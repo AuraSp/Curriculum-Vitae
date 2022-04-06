@@ -24,6 +24,10 @@ tsParticles.load({
   }
 });
 
+ScrollOut({
+  targets: 'h1, p, h2'
+});
+
 $(document).ready(function () {
   $('body').mousemove((e) => {
     $('.cursor').css({ left: e.clientX, top: e.clientY });
