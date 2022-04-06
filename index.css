@@ -199,6 +199,7 @@ i {
     font-size: .6em;
     font-weight: normal;
     cursor: none;
+    font-family: 'Kalam';
 }
 
 .sound:before,
@@ -239,6 +240,7 @@ i {
     -webkit-writing-mode: vertical-lr;
     -ms-writing-mode: tb-lr;
     writing-mode: vertical-lr;
+    font-family: 'Kalam';
 }
 
 .spark:before {
