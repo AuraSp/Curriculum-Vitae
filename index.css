@@ -167,6 +167,7 @@ body {
     color: #fff;
     font-size: 2em;
     margin-right: 3em;
+    font-family: 'Kalam', cursive;
 }
 
 .music:before {
@@ -199,7 +200,7 @@ i {
     font-size: .6em;
     font-weight: normal;
     cursor: none;
-    font-family: 'Kalam';
+    font-family:'Kalam', cursive;
 }
 
 .sound:before,
@@ -240,7 +241,7 @@ i {
     -webkit-writing-mode: vertical-lr;
     -ms-writing-mode: tb-lr;
     writing-mode: vertical-lr;
-    font-family: 'Kalam';
+    font-family:'Kalam', cursive;
 }
 
 .spark:before {
@@ -276,7 +277,7 @@ main {
     background: linear-gradient(to right, #ff1100, #ff0019, #ff0037, #9e0631, #700024);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: Kalam;
+    font-family: 'Kalam', cursive;
     height: 45vh;
 }
 
@@ -339,7 +340,7 @@ main {
     -o-transition: 0.5s;
     transition: 0.5s;
     font-size: 2em;
-    font-family: Kalam;
+    font-family: 'Kalam';
     padding-top: 1.3em;
 }
 
@@ -354,7 +355,7 @@ main {
     border: none;
     -webkit-animation: ani 0.7s steps(22) forwards;
     animation: ani 0.7s steps(22) forwards;
-    font-family: Yellowtail;
+    font-family: 'Yellowtail', cursive;
     background-image: -webkit-gradient(linear, left top, right top, from(#f71d0c), color-stop(#f80f25), color-stop(#f70437), color-stop(#f40346), to(#f00d54));
     background-image: -o-linear-gradient(left, #f71d0c, #f80f25, #f70437, #f40346, #f00d54);
     background-image: linear-gradient(to right, #f71d0c, #f80f25, #f70437, #f40346, #f00d54);
