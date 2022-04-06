@@ -563,6 +563,10 @@ footer .fas {
         font-size: 0.8em;
     }
 
+    .logo .a{
+        left: 0.6em;
+    }
+
     .title_one,
     .title_two {
         text-align: center;
