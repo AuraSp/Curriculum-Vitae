@@ -272,8 +272,10 @@ main {
     align-items: center;
     text-align: center;
     color: #9e0631;
-
-
+    background: -webkit-gradient(linear, left top, right top, from(#ff1100), color-stop(#ff0019), color-stop(#ff0037), color-stop(#9e0631), to(#700024));
+    background: -o-linear-gradient(left, #ff1100, #ff0019, #ff0037, #9e0631, #700024);
+    background: linear-gradient(to right, #ff1100, #ff0019, #ff0037, #9e0631, #700024);
+    -webkit-background-clip: text;
     font-family: 'Kalam', cursive;
     height: 45vh;
 }
