@@ -809,7 +809,7 @@ main {
   }
 
   .aboutTitle {
-    font-size: 1em;
+    font-size: 1.4em;
     margin-left: 0;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -827,7 +827,12 @@ main {
 
   .about {
     height: auto;
-    font-size: 0.5em;
+    font-size: 0.6em;
+  }
+
+  .about h1 {
+    font-size: 2em;
+    letter-spacing: 2px;
   }
 
   .myself,
@@ -985,8 +990,14 @@ main {
 
   .about {
     height: auto;
-    font-size: 0.8em;
+    font-size: 0.6em;
   }
+
+  .about h1 {
+    font-size: 2em;
+    letter-spacing: 2px;
+  }
+
 
   .myself,
   .programming,
@@ -1040,6 +1051,12 @@ main {
   .about {
     height: auto;
   }
+
+  .about h1 {
+    font-size: 3em;
+    letter-spacing: 2px;
+  }
+
 
   .myself,
   .programming,
