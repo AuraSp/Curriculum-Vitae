@@ -376,8 +376,8 @@ header {
   background: linear-gradient(to right, #ffffff, #8a4047, #9b0113, #700011, #9c0000);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation: 1s ease 0s slideInFromLeft normal running;
-  animation: 1s ease 0s slideInFromLeft normal running;
+  -webkit-animation: 1s linear 0s slideInFromLeft normal running;
+  animation: 1s linear 0s slideInFromLeft normal running;
 }
 
 @-webkit-keyframes slideInFromLeft {
