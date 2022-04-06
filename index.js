@@ -18,5 +18,5 @@ $(document).ready(function () {
     $('.about').click(function () {
         console.log('d')
         window.location.href='./pages/aboutMe.html';
-    })
+    });
 });
