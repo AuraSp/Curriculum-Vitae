@@ -293,7 +293,7 @@ body {
   right: 1.9em;
   top: 0.5em;
   font-weight: 900;
-  text-shadow: 10px 4px 30px #ffffff;
+  text-shadow: 10px 4px 10px #ff0000;
   color: #f71d0c;
 }
 
@@ -305,7 +305,7 @@ body {
   -ms-transform: rotate(-30deg);
   transform: rotate(-30deg);
   font-size: 5em;
-  text-shadow: 10px 4px 25px #ebadadbe;
+  text-shadow: 10px 4px 15px #eccdcdbe;
   color: #c92735;
 }
 
@@ -911,6 +911,11 @@ main {
   .programming,
   .work {
     margin: 2em auto;
+  }
+
+  .about h1 {
+  font-size: 3em;
+  letter-spacing: 2px;
   }
 
   .levels {
