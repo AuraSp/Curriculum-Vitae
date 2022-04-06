@@ -768,7 +768,7 @@ main {
   color: #8f002d;
 }
 
-@media screen and (max-width: 475px) {
+@media screen and (min-width: 435px) and (max-width: 475px) {
   .sidenav {
     display: none;
   }
