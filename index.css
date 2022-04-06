@@ -474,7 +474,7 @@ footer .fas {
     }
 }
 
-@media screen and (min-width: 435px) and (max-width: 534px) {
+@media screen and (min-width: 375px) and (max-width: 534px) {
     html {
         height: 100%;
         padding: 0;
