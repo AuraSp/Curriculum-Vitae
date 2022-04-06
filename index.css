@@ -4,6 +4,7 @@
 *::before,
 *::after,
 .row {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -14,11 +15,14 @@
     width: 25px;
     height: 25px;
     border: none;
+    -webkit-box-shadow: 0 0 55px rgb(170, 1, 1);
     box-shadow: 0 0 55px rgb(170, 1, 1);
     border-radius: 50%;
     left: 0;
     top: 0;
     pointer-events: none;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
@@ -32,7 +36,11 @@
     left: 0;
     top: 0;
     pointer-events: none;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    -webkit-transform-origin: 10%;
+    -ms-transform-origin: 10%;
     transform-origin: 10%;
 }
 
@@ -52,26 +60,43 @@ body {
 
 .header-right,
 .header-left {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
     align-items: baseline;
     color: #fff;
 }
 
 .header-left {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: start;
     padding: 2em 0 0 6em;
 }
 
 .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
     align-items: baseline;
 }
 
 .a {
     font-family: 'Kalam', cursive;
+    -webkit-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
     transform: rotate(-5deg);
     font-size: 2em;
     position: relative;
@@ -84,6 +109,8 @@ body {
 .s {
     font-family: 'Yellowtail', cursive;
     position: relative;
+    -webkit-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
     transform: rotate(-30deg);
     font-size: 5em;
     color: #c92735;
@@ -95,6 +122,8 @@ body {
     content: '[';
     left: 10px;
     opacity: 0;
+    -webkit-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
     transition: all 0.7s ease;
 }
 
@@ -103,6 +132,8 @@ body {
     content: ']';
     right: 10px;
     opacity: 0;
+    -webkit-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
     transition: all 0.7s ease;
 }
 
@@ -120,7 +151,11 @@ body {
 
 .header-right {
     padding: 2em 0 0 0;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
     align-items: flex-end;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -135,6 +170,8 @@ body {
 }
 
 .music:before {
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
     transform: rotate(-90deg);
     content: '';
     position: absolute;
@@ -144,6 +181,7 @@ body {
     bottom: 0;
     top: -1em;
     left: 1.1em;
+    background-image: -o-radial-gradient(circle, #f71d0c, #f80f25, #f70437, #f40346, #f00d54);
     background-image: radial-gradient(circle, #f71d0c, #f80f25, #f70437, #f40346, #f00d54);
 }
 
@@ -167,6 +205,8 @@ i {
 .sound:after {
     position: absolute;
     opacity: 0;
+    -webkit-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
     transition: all 0.7s ease;
     font-size: 2.5em;
     bottom: -.2em;
@@ -196,10 +236,14 @@ i {
 .spark {
     position: relative;
     top: 4em;
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: tb-lr;
     writing-mode: vertical-lr;
 }
 
 .spark:before {
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
     transform: rotate(-90deg);
     content: '';
     position: absolute;
@@ -208,14 +252,24 @@ i {
     bottom: 0;
     top: -3.5em;
     left: -2.3em;
+    background-image: -o-radial-gradient(circle, #f71d0c, #f80f25, #f70437, #f40346, #f00d54);
     background-image: radial-gradient(circle, #f71d0c, #f80f25, #f70437, #f40346, #f00d54);
 }
 
 main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
     flex-flow: column nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     text-align: center;
+    background: -webkit-gradient(linear, left top, right top, from(#ff1100), color-stop(#ff0019), color-stop(#ff0037), color-stop(#9e0631), to(#700024));
+    background: -o-linear-gradient(left, #ff1100, #ff0019, #ff0037, #9e0631, #700024);
     background: linear-gradient(to right, #ff1100, #ff0019, #ff0037, #9e0631, #700024);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -230,15 +284,19 @@ main {
     font-size: 6em;
     font-weight: 800;
     margin: 0;
+    -webkit-transform: translateX(-10%);
+    -ms-transform: translateX(-10%);
     transform: translateX(-10%);
 }
 
-.title_one > span:before {
+.title_one>span:before {
     content: '';
     position: absolute;
     width: 1em;
     height: .1em;
     top: 1.5em;
+    -webkit-transform: translateX(-110%);
+    -ms-transform: translateX(-110%);
     transform: translateX(-110%);
     background-color: rgb(243, 205, 205);
 }
@@ -254,6 +312,8 @@ main {
     width: 50%;
     font-size: 5em;
     font-weight: 800;
+    -webkit-transform: translateX(10%);
+    -ms-transform: translateX(10%);
     transform: translateX(10%);
 }
 
@@ -265,7 +325,11 @@ main {
 
 .row:nth-child(3) {
     position: relative;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
     font-size: 2em;
     font-family: Kalam;
@@ -275,17 +339,23 @@ main {
 .row:nth-child(3) .about {
     width: 6em;
     height: 2em;
+    -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
     mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+    -webkit-mask-size: 2300% 100%;
     mask-size: 2300% 100%;
     border-radius: 15px;
     border: none;
+    -webkit-animation: ani 0.7s steps(22) forwards;
     animation: ani 0.7s steps(22) forwards;
     font-family: Yellowtail;
+    background-image: -webkit-gradient(linear, left top, right top, from(#f71d0c), color-stop(#f80f25), color-stop(#f70437), color-stop(#f40346), to(#f00d54));
+    background-image: -o-linear-gradient(left, #f71d0c, #f80f25, #f70437, #f40346, #f00d54);
     background-image: linear-gradient(to right, #f71d0c, #f80f25, #f70437, #f40346, #f00d54);
     cursor: none;
 }
 
 .row:nth-child(3) .about:hover {
+    -webkit-animation: ani2 0.7s steps(22) forwards;
     animation: ani2 0.7s steps(22) forwards;
     color: #fff;
 }
@@ -308,6 +378,18 @@ main {
     width: 5em;
 }
 
+@-webkit-keyframes ani {
+    from {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+    }
+
+    to {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+}
+
 @keyframes ani {
     from {
         -webkit-mask-position: 0 0;
@@ -317,6 +399,18 @@ main {
     to {
         -webkit-mask-position: 100% 0;
         mask-position: 100% 0;
+    }
+}
+
+@-webkit-keyframes ani2 {
+    from {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+
+    to {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
     }
 }
 
@@ -348,11 +442,14 @@ footer .fas {
         text-align: center;
     }
 
-    .logo, .mas, .about {
+    .logo,
+    .mas,
+    .about {
         font-size: 0.8em;
     }
 
-    .title_one, .title_two {
+    .title_one,
+    .title_two {
         text-align: center;
         display: block;
         width: 80%;
@@ -361,13 +458,14 @@ footer .fas {
 
     .spark {
         position: relative;
+        -ms-flex-item-align: start;
         align-self: flex-start;
         top: 6em;
         font-size: 0.8em;
     }
 
     .music {
-       display: none;
+        display: none;
     }
 
     footer .fas {
@@ -383,7 +481,12 @@ footer .fas {
     }
 
     header {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
         flex-flow: row nowrap;
         height: 25vh;
     }
@@ -396,24 +499,28 @@ footer .fas {
         text-align: center;
     }
 
-    .logo, .mas, .about {
+    .logo,
+    .mas,
+    .about {
         font-size: 0.8em;
     }
 
-    .title_one, .title_two {
+    .title_one,
+    .title_two {
         text-align: center;
         font-size: 2.2em;
     }
 
     .spark {
         position: relative;
+        -ms-flex-item-align: start;
         align-self: flex-start;
         top: 6em;
         font-size: 0.8em;
     }
 
     .music {
-       display: none;
+        display: none;
     }
 
     footer .fas {
@@ -429,7 +536,12 @@ footer .fas {
     }
 
     header {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
         flex-flow: row nowrap;
         height: 25vh;
     }
@@ -442,11 +554,14 @@ footer .fas {
         text-align: center;
     }
 
-    .logo, .mas, .about {
+    .logo,
+    .mas,
+    .about {
         font-size: 1em;
     }
 
-    .title_one, .title_two {
+    .title_one,
+    .title_two {
         text-align: center;
         display: block;
         width: 80%;
@@ -456,13 +571,14 @@ footer .fas {
 
     .spark {
         position: relative;
+        -ms-flex-item-align: start;
         align-self: flex-start;
         top: 6em;
         font-size: 1em;
     }
 
     .music {
-       display: none;
+        display: none;
     }
 
     footer .fas {
@@ -476,7 +592,8 @@ footer .fas {
         text-align: center;
     }
 
-    .title_one, .title_two {
+    .title_one,
+    .title_two {
         display: block;
         width: 80%;
         font-size: 4em;
@@ -485,6 +602,7 @@ footer .fas {
 
     .spark {
         position: relative;
+        -ms-flex-item-align: start;
         align-self: flex-start;
         top: 6em;
         font-size: 1em;
@@ -503,7 +621,12 @@ footer .fas {
     }
 
     header {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
         flex-flow: row nowrap;
         height: 25vh;
     }
@@ -512,13 +635,15 @@ footer .fas {
         text-align: center;
     }
 
-    .title_one, .title_two {
+    .title_one,
+    .title_two {
         display: block;
         width: 80%;
     }
 
     .spark {
         position: relative;
+        -ms-flex-item-align: start;
         align-self: flex-start;
         top: 6em;
         font-size: 1em;
@@ -536,13 +661,16 @@ footer .fas {
 }
 
 @media screen and (min-width: 993px) and (max-width:1332px) {
-    .title_one, .title_two {
+
+    .title_one,
+    .title_two {
         display: block;
         width: 80%;
     }
 
     .spark {
         position: relative;
+        -ms-flex-item-align: start;
         align-self: flex-start;
         top: 6em;
         font-size: 1em;

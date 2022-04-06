@@ -4,6 +4,7 @@
 *::before,
 *::after,
 .row {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -16,13 +17,18 @@
   width: 25px;
   height: 25px;
   border: none;
+  -webkit-box-shadow: 0 0 55px rgb(255, 1, 1);
   box-shadow: 0 0 55px rgb(255, 1, 1);
   border-radius: 50%;
   left: 0;
   top: 0;
   z-index: 1000;
   pointer-events: none;
+  -webkit-transition: all 0.4s cubic-bezier(0, 0, 0.58, 1) 0s;
+  -o-transition: all 0.4s cubic-bezier(0, 0, 0.58, 1) 0s;
   transition: all 0.4s cubic-bezier(0, 0, 0.58, 1) 0s;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -37,7 +43,11 @@
   top: 0;
   z-index: 1000;
   pointer-events: none;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  -webkit-transform-origin: 10%;
+  -ms-transform-origin: 10%;
   transform-origin: 10%;
 }
 
@@ -67,9 +77,13 @@ body {
   text-decoration: none;
   display: block;
   border-bottom: 2px solid #fff;
+  background: -webkit-gradient(linear, left top, right top, from(#ff0019), color-stop(#ff0037), color-stop(#9e0631), to(#700024));
+  background: -o-linear-gradient(left, #ff0019, #ff0037, #9e0631, #700024);
   background: linear-gradient(to right, #ff0019, #ff0037, #9e0631, #700024);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
   transition: 500ms;
 }
 
@@ -79,9 +93,18 @@ body {
 }
 
 .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   color: #fff;
   background-color: #000;
@@ -110,6 +133,8 @@ body {
   z-index: 1000;
   width: 100%;
   height: 15vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#000), to(transparent));
+  background: -o-linear-gradient(top, #000, transparent);
   background: linear-gradient(to bottom, #000, transparent);
 }
 
@@ -117,6 +142,8 @@ body {
   height: 20%;
   right: 0.2em;
   font-family: 'Kalam', cursive;
+  -webkit-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
   transform: rotate(-5deg);
   font-size: 2em;
   position: relative;
@@ -132,6 +159,8 @@ body {
   left: -0.5em;
   font-family: 'Yellowtail', cursive;
   position: relative;
+  -webkit-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
   transform: rotate(-30deg);
   font-size: 5em;
   color: #c92735;
@@ -143,6 +172,8 @@ body {
   content: '[';
   left: 10px;
   opacity: 0;
+  -webkit-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
   transition: all 0.7s ease;
 }
 
@@ -151,6 +182,8 @@ body {
   content: ']';
   right: 10px;
   opacity: 0;
+  -webkit-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
   transition: all 0.7s ease;
 }
 
@@ -174,40 +207,69 @@ body {
   padding: 1em;
   font-size: 0.8em;
   display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 0, 0)), to(transparent));
+  background: -o-linear-gradient(top, rgb(0, 0, 0), transparent);
   background: linear-gradient(to bottom, rgb(0, 0, 0), transparent);
 }
 
 .logo2 {
+  -ms-flex-preferred-size: 30%;
   flex-basis: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   color: #fff;
   height: 15vh;
 }
 
 .links2 {
+  -ms-flex-preferred-size: 70%;
   flex-basis: 70%;
   font-family: 'kalam';
   font-size: 1.5em;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
 .logo2,
 .links2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
 }
 
 .links2 a {
   text-decoration: none;
   margin: 0 1em;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
   transition: 500ms;
   font-size: 1.3em;
   text-align: center;
+  background: -webkit-gradient(linear, left top, right top, from(#ff0019), color-stop(#ff0037), color-stop(#9e0631), to(#700024));
+  background: -o-linear-gradient(left, #ff0019, #ff0037, #9e0631, #700024);
   background: linear-gradient(to right, #ff0019, #ff0037, #9e0631, #700024);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -216,11 +278,15 @@ body {
 .links2 a:hover {
   border-bottom: 2px solid #fff;
   border-color: #ffffff;
+  -webkit-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
   transform: scale(1.1, 1.1);
 }
 
 .a2 {
   font-family: 'Kalam', cursive;
+  -webkit-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
   transform: rotate(-5deg);
   font-size: 2em;
   position: relative;
@@ -235,6 +301,8 @@ body {
   font-family: 'Yellowtail', cursive;
   position: relative;
   right: 1em;
+  -webkit-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
   transform: rotate(-30deg);
   font-size: 5em;
   text-shadow: 10px 4px 25px #ebadadbe;
@@ -246,6 +314,8 @@ body {
   content: '[';
   left: 10px;
   opacity: 0;
+  -webkit-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
   transition: all 0.7s ease;
 }
 
@@ -254,6 +324,8 @@ body {
   content: ']';
   right: 10px;
   opacity: 0;
+  -webkit-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
   transition: all 0.7s ease;
 }
 
@@ -285,24 +357,52 @@ header {
   margin-left: 6em;
   font-weight: bold;
   font-family: 'Kalam';
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
   background-color: transparent;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
+  background: -webkit-gradient(linear, left top, right top, from(#ffffff), color-stop(#8a4047), color-stop(#9b0113), color-stop(#700011), to(#9c0000));
+  background: -o-linear-gradient(left, #ffffff, #8a4047, #9b0113, #700011, #9c0000);
   background: linear-gradient(to right, #ffffff, #8a4047, #9b0113, #700011, #9c0000);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-animation: 1s ease 0s slideInFromLeft normal running;
   animation: 1s ease 0s slideInFromLeft normal running;
 }
 
-@keyframes slideInFromLeft {
+@-webkit-keyframes slideInFromLeft {
   0% {
+    -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
     opacity: 0;
   }
 
   100% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0%);
     transform: translateX(0%);
     opacity: 1;
   }
@@ -319,8 +419,14 @@ main {
   position: relative;
   width: 90%;
   height: 85vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -339,14 +445,22 @@ main {
   margin: 0;
   padding: 0;
   display: inline-block;
+  -webkit-transition: 1.8s;
+  -o-transition: 1.8s;
   transition: 1.8s;
+  -webkit-transform-origin: left;
+  -ms-transform-origin: left;
   transform-origin: left;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
   transform: scaleX(0);
   font-family: 'Yellowtail';
 }
 
 .about h1[data-scroll='in'],
 .levels h2[data-scroll='in'] {
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
   transform: scaleX(1);
 }
 
@@ -359,13 +473,21 @@ main {
   width: 100%;
   height: 100%;
   background-color: whitesmoke;
+  -webkit-transform-origin: right;
+  -ms-transform-origin: right;
   transform-origin: right;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
   transition: 1s;
 }
 
 .about h1[data-scroll='in']:before,
 .levels h2[data-scroll='in']:before {
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
   transform: scaleX(0);
+  -webkit-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
   transition-delay: 0.5s;
 }
 
@@ -381,6 +503,8 @@ main {
 
 .about p {
   font-size: 1.8em;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
   transition: 1s;
   margin-top: 1em;
   opacity: 0;
@@ -389,6 +513,8 @@ main {
 
 .about p[data-scroll='in'] {
   opacity: 1;
+  -webkit-transition-delay: 0.8s;
+  -o-transition-delay: 0.8s;
   transition-delay: 0.8s;
 }
 
@@ -398,13 +524,19 @@ main {
   padding: 3em 3em 3em;
   border: 1px #f5f5f55b;
   border-radius: 10px;
+  -webkit-box-shadow: 5px 20px 30px #16080896;
   box-shadow: 5px 20px 30px #16080896;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 
 .details {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin: 1.2em 0 0.2em 0;
   font-family: 'Kalam';
@@ -423,11 +555,20 @@ main {
   width: 0;
   height: 9px;
   border-radius: 10px;
+  background: -webkit-gradient(linear, left top, right top, from(#ff0019), color-stop(#ff0019), color-stop(#ff0015), color-stop(#d30527), to(#8f002d));
+  background: -o-linear-gradient(left, #ff0019, #ff0019, #ff0015, #d30527, #8f002d);
   background: linear-gradient(to right, #ff0019, #ff0019, #ff0015, #d30527, #8f002d);
 }
 
 #html-bar {
+  -webkit-animation: html-fill 2s forwards;
   animation: html-fill 2s forwards;
+}
+
+@-webkit-keyframes html-fill {
+  100% {
+    width: 100%;
+  }
 }
 
 @keyframes html-fill {
@@ -437,7 +578,14 @@ main {
 }
 
 #css-bar {
+  -webkit-animation: css-fill 2s forwards;
   animation: css-fill 2s forwards;
+}
+
+@-webkit-keyframes css-fill {
+  100% {
+    width: 80%;
+  }
 }
 
 @keyframes css-fill {
@@ -447,7 +595,14 @@ main {
 }
 
 #js-bar {
+  -webkit-animation: js-fill 2s forwards;
   animation: js-fill 2s forwards;
+}
+
+@-webkit-keyframes js-fill {
+  100% {
+    width: 72%;
+  }
 }
 
 @keyframes js-fill {
@@ -457,7 +612,14 @@ main {
 }
 
 #jQuery-bar {
+  -webkit-animation: jQuery-fill 2s forwards;
   animation: jQuery-fill 2s forwards;
+}
+
+@-webkit-keyframes jQuery-fill {
+  100% {
+    width: 60%;
+  }
 }
 
 @keyframes jQuery-fill {
@@ -467,7 +629,14 @@ main {
 }
 
 #ReactJS-bar {
+  -webkit-animation: ReactJS-fill 2s forwards;
   animation: ReactJS-fill 2s forwards;
+}
+
+@-webkit-keyframes ReactJS-fill {
+  100% {
+    width: 60%;
+  }
 }
 
 @keyframes ReactJS-fill {
@@ -477,7 +646,14 @@ main {
 }
 
 #MySQL-bar {
+  -webkit-animation: MySQL-fill 2s forwards;
   animation: MySQL-fill 2s forwards;
+}
+
+@-webkit-keyframes MySQL-fill {
+  100% {
+    width: 50%;
+  }
 }
 
 @keyframes MySQL-fill {
@@ -487,7 +663,14 @@ main {
 }
 
 #MongoDB-bar {
+  -webkit-animation: MongoDB-fill 2s forwards;
   animation: MongoDB-fill 2s forwards;
+}
+
+@-webkit-keyframes MongoDB-fill {
+  100% {
+    width: 30%;
+  }
 }
 
 @keyframes MongoDB-fill {
@@ -497,7 +680,14 @@ main {
 }
 
 #Firebase-bar {
+  -webkit-animation: Firebase-fill 2s forwards;
   animation: Firebase-fill 2s forwards;
+}
+
+@-webkit-keyframes Firebase-fill {
+  100% {
+    width: 23%;
+  }
 }
 
 @keyframes Firebase-fill {
@@ -511,14 +701,25 @@ main {
   position: relative;
   width: 60%;
   height: 65vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   letter-spacing: 0.8em;
 }
 
 .contacts h2 {
+  background: -webkit-gradient(linear, left top, right top, from(#ffffff), color-stop(#b9afb0), color-stop(#726a6b), color-stop(#474041), to(#ffffff));
+  background: -o-linear-gradient(left, #ffffff, #b9afb0, #726a6b, #474041, #ffffff);
   background: linear-gradient(to right, #ffffff, #b9afb0, #726a6b, #474041, #ffffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -535,9 +736,18 @@ main {
 }
 
 .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   font-size: 3em;
   padding: 1em;
@@ -546,10 +756,14 @@ main {
 
 .social i {
   color: whitesmoke;
+  -webkit-transition: 200ms all;
+  -o-transition: 200ms all;
   transition: 200ms all;
 }
 
 .social i:hover {
+  -webkit-transform: scale(1.3, 1.3);
+  -ms-transform: scale(1.3, 1.3);
   transform: scale(1.3, 1.3);
   color: #8f002d;
 }
@@ -560,11 +774,15 @@ main {
   }
 
   .sidenav2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 
   .logo2 {
+    -ms-flex-preferred-size: 30%;
     flex-basis: 30%;
+    -ms-flex-line-pack: center;
     align-content: center;
     font-size: 0.5em;
   }
@@ -573,12 +791,13 @@ main {
     right: 0;
     left: 0.6em;
   }
-  
+
   .s2 {
     right: 0;
   }
 
   .links2 {
+    -ms-flex-preferred-size: 90%;
     flex-basis: 90%;
     font-size: 0.8em;
   }
@@ -592,7 +811,11 @@ main {
   .aboutTitle {
     font-size: 1.5em;
     margin-left: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    background: -webkit-gradient(linear, left top, right top, from(#ffffff), color-stop(#ffffff), color-stop(#9b0113), color-stop(#af1b31), to(#be2020));
+    background: -o-linear-gradient(left, #ffffff, #ffffff, #9b0113, #af1b31, #be2020);
     background: linear-gradient(to right, #ffffff, #ffffff, #9b0113, #af1b31, #be2020);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -613,11 +836,11 @@ main {
     margin: 2em auto;
   }
 
-  .levels{
+  .levels {
     font-size: 0.8em;
   }
 
-  .contacts{
+  .contacts {
     font-size: 0.5em;
   }
 }
@@ -628,11 +851,15 @@ main {
   }
 
   .sidenav2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 
   .logo2 {
+    -ms-flex-preferred-size: 30%;
     flex-basis: 30%;
+    -ms-flex-line-pack: center;
     align-content: center;
     font-size: 0.8em;
   }
@@ -641,12 +868,13 @@ main {
     right: 0;
     left: 0.6em;
   }
-  
+
   .s2 {
     right: 0;
   }
 
   .links2 {
+    -ms-flex-preferred-size: 90%;
     flex-basis: 90%;
     font-size: 0.8em;
   }
@@ -660,7 +888,11 @@ main {
   .aboutTitle {
     font-size: 1.5em;
     margin-left: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    background: -webkit-gradient(linear, left top, right top, from(#ffffff), color-stop(#ffffff), color-stop(#9b0113), color-stop(#af1b31), to(#be2020));
+    background: -o-linear-gradient(left, #ffffff, #ffffff, #9b0113, #af1b31, #be2020);
     background: linear-gradient(to right, #ffffff, #ffffff, #9b0113, #af1b31, #be2020);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -681,11 +913,11 @@ main {
     margin: 2em auto;
   }
 
-  .levels{
+  .levels {
     font-size: 0.8em;
   }
 
-  .contacts{
+  .contacts {
     font-size: 0.5em;
   }
 }
@@ -696,11 +928,15 @@ main {
   }
 
   .sidenav2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 
   .logo2 {
+    -ms-flex-preferred-size: 30%;
     flex-basis: 30%;
+    -ms-flex-line-pack: center;
     align-content: center;
   }
 
@@ -708,12 +944,13 @@ main {
     right: 0;
     left: 0.6em;
   }
-  
+
   .s2 {
     right: 0;
   }
 
   .links2 {
+    -ms-flex-preferred-size: 90%;
     flex-basis: 90%;
     font-size: 1.2em;
   }
@@ -727,7 +964,11 @@ main {
   .aboutTitle {
     font-size: 2em;
     margin-left: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    background: -webkit-gradient(linear, left top, right top, from(#ffffff), color-stop(#ffffff), color-stop(#9b0113), color-stop(#af1b31), to(#be2020));
+    background: -o-linear-gradient(left, #ffffff, #ffffff, #9b0113, #af1b31, #be2020);
     background: linear-gradient(to right, #ffffff, #ffffff, #9b0113, #af1b31, #be2020);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -748,7 +989,7 @@ main {
     margin: 2em auto;
   }
 
-  .contacts{
+  .contacts {
     font-size: 0.8em;
   }
 }
@@ -759,6 +1000,8 @@ main {
   }
 
   .sidenav2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 
@@ -775,7 +1018,11 @@ main {
   .aboutTitle {
     font-size: 2em;
     margin-left: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    background: -webkit-gradient(linear, left top, right top, from(#ffffff), color-stop(#ffffff), color-stop(#9b0113), color-stop(#af1b31), to(#be2020));
+    background: -o-linear-gradient(left, #ffffff, #ffffff, #9b0113, #af1b31, #be2020);
     background: linear-gradient(to right, #ffffff, #ffffff, #9b0113, #af1b31, #be2020);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -802,6 +1049,8 @@ main {
   }
 
   .sidenav2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 
@@ -815,7 +1064,11 @@ main {
   .aboutTitle {
     font-size: 2em;
     margin-left: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    background: -webkit-gradient(linear, left top, right top, from(#ffffff), color-stop(#ffffff), color-stop(#9b0113), color-stop(#af1b31), to(#be2020));
+    background: -o-linear-gradient(left, #ffffff, #ffffff, #9b0113, #af1b31, #be2020);
     background: linear-gradient(to right, #ffffff, #ffffff, #9b0113, #af1b31, #be2020);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
