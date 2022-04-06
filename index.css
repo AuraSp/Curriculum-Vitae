@@ -276,6 +276,7 @@ main {
     background: -o-linear-gradient(left, #ff1100, #ff0019, #ff0037, #9e0631, #700024);
     background: linear-gradient(to right, #ff1100, #ff0019, #ff0037, #9e0631, #700024);
     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-family: 'Kalam', cursive;
     height: 45vh;
 }
