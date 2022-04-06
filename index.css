@@ -285,6 +285,7 @@ main {
     font-size: 6em;
     font-weight: 800;
     margin: 0;
+    color: #9e0631;
     -webkit-transform: translateX(-10%);
     -ms-transform: translateX(-10%);
     transform: translateX(-10%);
@@ -303,6 +304,7 @@ main {
 }
 
 .title_one span {
+    color: #9e0631;
     padding-left: .5em;
     font-size: .5em;
     font-weight: none;
@@ -313,12 +315,14 @@ main {
     width: 50%;
     font-size: 5em;
     font-weight: 800;
+    color: #9e0631;
     -webkit-transform: translateX(10%);
     -ms-transform: translateX(10%);
     transform: translateX(10%);
 }
 
 .title_two span {
+    color: #9e0631;
     font-size: .6em;
     font-weight: none;
     padding-left: 2em;
@@ -477,7 +481,7 @@ footer .fas {
 
 @media screen and (min-width: 375px) and (max-width: 534px) {
     html {
-        height: 100%;
+        height: auto;
         padding: 0;
     }
 
