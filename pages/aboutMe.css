@@ -62,7 +62,9 @@ body {
   z-index: 1;
   left: 0;
   overflow-x: hidden;
-  background: -webkit-gradient(linear, left top, right top, from(rgb(0, 0, 0)), color-stop(rgb(0, 0, 0)), to(transparent));background: -o-linear-gradient(left, rgb(0, 0, 0), rgb(0, 0, 0), transparent);background: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0), transparent);
+  background: -webkit-gradient(linear, left top, right top, from(rgb(0, 0, 0)), color-stop(rgb(0, 0, 0)), to(transparent));
+  background: -o-linear-gradient(left, rgb(0, 0, 0), rgb(0, 0, 0), transparent);
+  background: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0), transparent);
 }
 
 .links {
@@ -438,6 +440,10 @@ main {
   max-width: 60%;
 }
 
+.about .work a {
+  text-decoration: underline;
+}
+
 .about h1,
 .levels h2 {
   position: relative;
@@ -639,6 +645,24 @@ main {
 }
 
 @keyframes ReactJS-fill {
+  100% {
+    width: 60%;
+  }
+}
+
+
+#Ruby-bar {
+  -webkit-animation: Ruby-fill 2s forwards;
+  animation: Ruby-fill 2s forwards;
+}
+
+@-webkit-keyframes Ruby-fill {
+  100% {
+    width: 60%;
+  }
+}
+
+@keyframes Ruby-fill {
   100% {
     width: 60%;
   }
@@ -1104,7 +1128,7 @@ main {
     height: auto;
   }
 
-  .about h1{
+  .about h1 {
     font-size: 2em;
   }
 
