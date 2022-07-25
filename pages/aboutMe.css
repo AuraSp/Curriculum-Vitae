@@ -658,13 +658,13 @@ main {
 
 @-webkit-keyframes Ruby-fill {
   100% {
-    width: 60%;
+    width: 50%;
   }
 }
 
 @keyframes Ruby-fill {
   100% {
-    width: 60%;
+    width: 50%;
   }
 }
 
