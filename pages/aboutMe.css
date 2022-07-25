@@ -692,13 +692,13 @@ main {
 
 @-webkit-keyframes MongoDB-fill {
   100% {
-    width: 30%;
+    width: 55%;
   }
 }
 
 @keyframes MongoDB-fill {
   100% {
-    width: 30%;
+    width: 55%;
   }
 }
 
