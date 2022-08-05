@@ -25,7 +25,7 @@ tsParticles.load({
 });
 
 ScrollOut({
-  targets: 'h1, p, h2'
+  targets: 'h1, p, h2, h4'
 });
 
 $(document).ready(function () {

@@ -444,6 +444,17 @@ main {
   text-decoration: underline;
 }
 
+.about h4 {
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  margin-top: 1.2em;
+  margin-bottom: -1.2em;
+  opacity: 0;
+  font-family: 'Kalam';
+  color: #bb8080;
+}
+
 .about h1,
 .levels h2 {
   position: relative;
@@ -516,7 +527,8 @@ main {
   font-family: 'Kalam';
 }
 
-.about p[data-scroll='in'] {
+.about p[data-scroll='in'],
+.about h4[data-scroll='in'] {
   opacity: 1;
   -webkit-transition-delay: 0.8s;
   -o-transition-delay: 0.8s;
@@ -589,13 +601,13 @@ main {
 
 @-webkit-keyframes css-fill {
   100% {
-    width: 80%;
+    width: 100%;
   }
 }
 
 @keyframes css-fill {
   100% {
-    width: 80%;
+    width: 100%;
   }
 }
 
@@ -613,6 +625,23 @@ main {
 @keyframes js-fill {
   100% {
     width: 72%;
+  }
+}
+
+#ts-bar {
+  -webkit-animation: ts-fill 2s forwards;
+  animation: ts-fill 2s forwards;
+}
+
+@-webkit-keyframes ts-fill {
+  100% {
+    width: 10%;
+  }
+}
+
+@keyframes ts-fill {
+  100% {
+    width: 10%;
   }
 }
 
