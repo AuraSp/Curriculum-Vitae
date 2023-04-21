@@ -5,18 +5,18 @@ $(document).ready(function () {
         $('.cursorInner').css({left: e.clientX, top: e.clientY});
     });
 
-    $('.music').click(function () {
-        $('i').first().toggleClass('fa-volume-mute');
-        if (audio.paused == false) {
-            audio.pause();
-            audio.currentTime = 0;
-        } else {
-            audio.play();
-        }
-    });
+    // $('.music').click(function () {
+    //     $('i').first().toggleClass('fa-volume-mute');
+    //     if (audio.paused == false) {
+    //         audio.pause();
+    //         audio.currentTime = 0;
+    //     } else {
+    //         audio.play();
+    //     }
+    // });
 
-    $('.about').click(function () {
-        console.log('d')
-        window.location.href='./pages/aboutMe.html';
-    });
+    // $('.about').click(function () {
+    //     console.log('d')
+    //     window.location.href='./pages/aboutMe.html';
+    // });
 });
