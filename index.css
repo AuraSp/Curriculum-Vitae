@@ -195,7 +195,8 @@ a:hover {
     }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (min-width: 481px) and (max-width:768px) {
+
     .commingsoon {
         width: 380px;
         height: 380px;
@@ -212,6 +213,36 @@ a:hover {
     h3,
     a {
         font-size: var(--font-size-m);
+    }
+
+    h4 {
+        top: 65%;
+    }
+
+    h3 {
+        top: 70%;
+    }
+}
+
+@media screen and (max-width:480px) {
+
+    .commingsoon {
+        width: 380px;
+        height: 380px;
+    }
+
+
+    span {
+        top: 38%;
+        left: 52%;
+
+        font-size: 26px;
+    }
+
+    h4,
+    h3,
+    a {
+        font-size: 16px;
     }
 
     h4 {
