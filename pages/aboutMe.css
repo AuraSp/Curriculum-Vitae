@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Kalam&family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Yellowtail&display=swap');
 
 *,
 *::before,
@@ -771,11 +771,6 @@ main {
 }
 
 .contacts h2 {
-  background: -webkit-gradient(linear, left top, right top, from(#ffffff), color-stop(#b9afb0), color-stop(#726a6b), color-stop(#474041), to(#ffffff));
-  background: -o-linear-gradient(left, #ffffff, #b9afb0, #726a6b, #474041, #ffffff);
-  background: linear-gradient(to right, #ffffff, #b9afb0, #726a6b, #474041, #ffffff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   position: relative;
 }
 
@@ -1166,4 +1161,4 @@ main {
   .work {
     margin: 2em auto;
   }
-} */
+}
