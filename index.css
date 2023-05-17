@@ -65,7 +65,19 @@
      transform-origin: 10%;
  }
 
+ .middle {
+     position: relative;
+     width: 100vw;
+     height: 100vh;
+ }
+
  .commingsoon {
+     position: absolute;
+
+     left: 50%;
+     top: 0;
+     transform: translate(-50%, 50%);
+
      width: 530px;
      height: 500px;
 
@@ -73,7 +85,6 @@
 
      background: #1b181f;
      border-radius: 50%;
-     transform: translateY(50%);
      box-shadow:
          0px -75px 50px -5px var(--accent-color),
          0px -40px 25px -20px var(--text-color),
@@ -84,7 +95,9 @@
  span {
      position: absolute;
 
+     left: 50%;
      top: 50%;
+     transform: translate(-50%, 0);
 
      color: var(--text-color);
      letter-spacing: 1em;
@@ -99,6 +112,8 @@
      position: absolute;
 
      top: 80%;
+     left: 50%;
+     transform: translate(-50%, 0);
 
      color: var(--text-color);
      font-size: 30px;
@@ -109,6 +124,8 @@
      position: absolute;
 
      top: 85%;
+     left: 50%;
+     transform: translate(-50%, 0);
 
      color: var(--text-color);
      font-size: 30px;
@@ -122,4 +139,55 @@
 
  a:hover {
      color: #c51651a8;
+ }
+
+ @media screen and (min-width:769px) and (max-width:1550px) {
+     .commingsoon {
+         width: 500px;
+         height: 500px;
+     }
+
+     span {
+         transform: translate(-48%, 100%);
+
+         text-align: center;
+
+         font-size: 24px;
+     }
+
+     h4,
+     h3,
+     a {
+         font-size: 20px;
+     }
+ }
+
+ @media screen and (max-width:768px) {
+     .commingsoon {
+         width: 380px;
+         height: 380px;
+     }
+
+     span {
+         top: 38%;
+         left: 52%;
+
+         text-align: center;
+
+         font-size: 26px;
+     }
+
+     h4,
+     h3,
+     a {
+         font-size: 20px;
+     }
+
+     h4 {
+         top: 65%;
+     }
+
+     h3 {
+         top: 70%;
+     }
  }
