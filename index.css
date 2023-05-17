@@ -54,6 +54,7 @@ h3 {
     position: absolute;
 
     left: 50%;
+    width: 100vw;
 
     -webkit-transform: var(--center-transform3);
     -ms-transform: var(--center-transform3);
@@ -150,6 +151,8 @@ span {
 
 h4 {
     top: 80%;
+
+    margin-bottom: 1em auto;
 
     text-shadow: 0px 0px 35px var(--text-color);
 }
