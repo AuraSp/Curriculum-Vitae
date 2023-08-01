@@ -1,5 +1,5 @@
 /* Default styles */
-@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Yellowtail&family=Carter+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Yellowtail&family=Carter+One&family=Dekko&display=swap');
 
 :root {
     --text-color: #F0E2AB;
@@ -60,6 +60,7 @@ h3 {
     -ms-transform: var(--center-transform3);
     transform: var(--center-transform3);
 
+    font-family: Dekko;
     font-size: var(--font-size-l);
     color: var(--text-color);
 }
@@ -141,10 +142,10 @@ span {
     top: 50%;
 
     color: var(--text-color);
-    letter-spacing: 1em;
+    letter-spacing: 0.8em;
     font-size: 40px;
     font-weight: bolder;
-    font-family: Carter One;
+    font-family: Dekko;
     text-transform: capitalize;
     text-shadow: 0px 0px 35px var(--accent-color);
 }
@@ -153,8 +154,7 @@ h4 {
     top: 80%;
 
     margin-bottom: 1em auto;
-
-    text-shadow: 0px 0px 35px var(--text-color);
+    font-family: Dekko;
 }
 
 h3 {
