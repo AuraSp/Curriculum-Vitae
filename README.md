@@ -8,7 +8,7 @@
 <li>Ohhh, what about building something more complex, for instance, API?</li>
 <li>Of course! You <b>must not</b> forget to have a coffee break</li>
 <li>Why not to spend some time with your pet outside!</li>
-<li>If you think that development has no end, what about universe?<li>
-<li>Have you ever looked up at the sky and wondered why those dots are glowing?
+<li>If you think that development has no end, what about universe?</li>
+<li>Have you ever looked up at the sky and wondered why those dots are glowing?</li>li>
 </ul>
 
