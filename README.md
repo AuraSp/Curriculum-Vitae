@@ -1,6 +1,6 @@
 <h2>Hi, Hello! I'm Aura</h2>
 
-#### Currently this repository is being updated.
+#### Currently this repository is being updated and will be migrated to ReactJS.
 <p>Until then, I can point some view about me:
 <ul>
 <li>So much to do in Front End</li>
